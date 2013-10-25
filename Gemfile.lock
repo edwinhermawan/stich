@@ -164,7 +164,6 @@ DEPENDENCIES
   jquery-rails
   mongoid!
   nifty-generators
-  omniauth
   omniauth-google_oauth2
   rails (= 4.0.0)
   rails_12factor
