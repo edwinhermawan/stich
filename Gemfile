@@ -1,5 +1,23 @@
 source 'https://rubygems.org'
 
+ruby "2.0.0"
+
+# Heroku gem to handle production environment and keep separate from development environment
+group :production do
+	gem 'rails_12factor'
+	gem 'thin'
+end
+
+# Bundle for Omniauth to setup Google authorizations
+gem 'omniauth'
+
+gem 'nifty-generators'
+# Bundle to install MongoDB
+gem 'mongoid', github: 'mongoid/mongoid'
+
+# Bundle for authentication by hand
+gem 'bcrypt-ruby', '~> 3.1.2'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
