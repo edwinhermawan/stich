@@ -3,7 +3,7 @@ class AuthenticationsController < ApplicationController
 
 	def destroy
 	    session[:user_id] = nil
-	    redirect_to timers_url,
+	    redirect_to '/authentications/new',
     	notice: "You signed out."
   	end
   	
@@ -12,6 +12,7 @@ class AuthenticationsController < ApplicationController
 			redirect_to timers_url
 		else
 			@user = User.new
+			@newuser = User.new
 		end
 	end
 

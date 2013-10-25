@@ -4,7 +4,6 @@ timer#index
 	<%= timer.name %>
 	<%= button_to "X", {action: "destroy", id: timer.id}, {method: :delete, data:{confirm: "Are you sure??"}, :class => "button"} %>
 	
-	<%# link_to "logout", {:controller=> "authentications", :action=> "destroy"} %>
-	<%= button_to "Log out", "/authentications/_", method: :delete %>
+	<%= button_to "Log out", "authentications", method: :delete %>
 
 <% end %>

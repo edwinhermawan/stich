@@ -14,7 +14,7 @@ class TimersController < ApplicationController
 
 	def create
 		@timer = Timer.create(params[:timer].permit(:name))
-		redirect_to :action => "show", :id =>@timer._id
+		redirect_to timers_url
 	end
 
 	def destroy
