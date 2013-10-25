@@ -1,4 +1,10 @@
 Stich::Application.routes.draw do
-  resources :timers, :users, :authentications
+  root 'authentications#new'
+  # New, create, destroy for Authentications controller
+  get 'authentications/new' => 'authentications#new'
+  post 'authentications' => 'authentications#create'
+  delete 'authentications/:id' => 'authentications#destroy'
+
+  resources :timers, :users
 end
 
