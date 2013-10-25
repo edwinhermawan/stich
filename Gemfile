@@ -9,8 +9,8 @@ group :production do
 end
 
 # Bundle for Omniauth to setup Google authorizations
-# gem 'omniauth'
-gem 'omniauth-google_oauth2'
+# # gem 'omniauth'
+# gem 'omniauth-google_oauth2'
 
 gem 'nifty-generators'
 # Bundle to install MongoDB
