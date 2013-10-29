@@ -5,6 +5,10 @@ timer#index
 	<%= button_to "X", {action: "destroy", id: timer.id}, {method: :delete, data:{confirm: "Are you sure??"}, :class => "button"} %>
 	
 	<%= button_to "Log out", "authentications", method: :delete %>
+
+<% end %>
+
+<!-- Get Pivotal Tracker Cards Begin -->
 <form>
       <p>
         <label for='token'>User API Token:</label>
@@ -61,4 +65,16 @@ timer#index
     $('#doit_link').click(executeTrackerApiFetch);
   });
 </script>
-<% end %>
+<!-- Get Pivotal Tracker Cards End -->
+
+<!-- Stopwatch -->
+<div id="myStopwatch1"></div>
+<div id="myStopwatch2"></div>
+
+<script type="text/javascript">
+  $(function() {
+    $('#myStopwatch1').stopwatch('theme-1');
+    $('#myStopwatch2').stopwatch('theme-4');
+  });
+</script>
+<!-- End Stopwatch -->

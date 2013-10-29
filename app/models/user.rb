@@ -10,6 +10,8 @@ class User
 	field :hashed_password, type: String
 	field :provider, type: String
 	field :uid, type: String
+	field :token, type: String
+	field :project_id, type: String
 
 
 before_save :hash_password

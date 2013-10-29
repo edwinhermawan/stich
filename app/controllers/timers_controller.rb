@@ -2,6 +2,7 @@ class TimersController < ApplicationController
 
 	def index
 		@timers = Timer.all
+		@token = User.
 	end
 
 	def show
