@@ -1,10 +1,10 @@
 <%= button_to "Log out", "/authentications/", :method => :delete %>
-card#index
+
 <% @cards.each do |card| %>
 
 	<%= card.name %>
 	<%= button_to "X", {action: "destroy", id: card.id}, {method: :delete, data:{confirm: "Are you sure??"}, :class => "button"} %>
-	
+<% end %>
 <form>
       <p>
         <label for='token'>User API Token:</label>
@@ -61,7 +61,7 @@ card#index
     $('#doit_link').click(executeTrackerApiFetch);
   });
 </script>
-<% end %>
+
 
 <!-- JQuery CDN Library for Timer -->
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
