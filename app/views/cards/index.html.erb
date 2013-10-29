@@ -1,10 +1,10 @@
-timer#index
-<% @timers.each do |timer| %>
+<%= button_to "Log out", "/authentications/", :method => :delete %>
+card#index
+<% @cards.each do |card| %>
 
-	<%= timer.name %>
-	<%= button_to "X", {action: "destroy", id: timer.id}, {method: :delete, data:{confirm: "Are you sure??"}, :class => "button"} %>
+	<%= card.name %>
+	<%= button_to "X", {action: "destroy", id: card.id}, {method: :delete, data:{confirm: "Are you sure??"}, :class => "button"} %>
 	
-	<%= button_to "Log out", "authentications", method: :delete %>
 <form>
       <p>
         <label for='token'>User API Token:</label>

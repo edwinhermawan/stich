@@ -2,6 +2,7 @@ require 'bcrypt'
 
 class User
 	include Mongoid::Document
+	has_and_belongs_to_many :uprojects, class_name: 'Project', inverse_of: :pusers 
 
 	attr_accessor :password, :password_confirmation
 

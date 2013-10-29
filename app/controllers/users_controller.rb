@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@newuser = User.create(params[:user].permit(:email, :password, :password_confirmation))
-		redirect_to timers_url
+		@newuser = User.create(params[:user].permit(:email, :password, :password_confirmation, :token))
+		redirect_to cards_url
 	end
 end

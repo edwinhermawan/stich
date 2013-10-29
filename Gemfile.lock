@@ -79,7 +79,6 @@ GEM
       optionable (~> 0.1.1)
     multi_json (1.8.2)
     multipart-post (1.2.0)
-    nifty-generators (0.4.6)
     oauth2 (0.8.1)
       faraday (~> 0.8)
       httpauth (~> 0.1)
@@ -167,7 +166,6 @@ DEPENDENCIES
   jquery-rails
   mocha
   mongoid!
-  nifty-generators
   omniauth-google-oauth2
   rails (= 4.0.0)
   rails_12factor
