@@ -1,14 +1,11 @@
-timer#index
-<% @timers.each do |timer| %>
-
-	<%= timer.name %>
-	<%= button_to "X", {action: "destroy", id: timer.id}, {method: :delete, data:{confirm: "Are you sure??"}, :class => "button"} %>
-	
-	<%= button_to "Log out", "authentications", method: :delete %>
-
-<% end %>
+<%= button_to "Log out", "/authentications/", :method => :delete %>
 
 <!-- Get Pivotal Tracker Cards Begin -->
+<% @cards.each do |card| %>
+
+	<%= card.name %>
+	<%= button_to "X", {action: "destroy", id: card.id}, {method: :delete, data:{confirm: "Are you sure??"}, :class => "button"} %>
+<% end %>
 <form>
       <p>
         <label for='token'>User API Token:</label>
@@ -78,3 +75,19 @@ timer#index
   });
 </script>
 <!-- End Stopwatch -->
+<% end %>
+
+<!-- JQuery CDN Library for Timer -->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<!-- JQuery for the Timer -->
+<script type="text/javascript" src="../assets/jq.stopwatch.min.js"></script>
+
+<!-- Code for Timer -->
+<div id="myStopwatch"></div>
+<script type="text/javascript">
+  $(function() {
+    $('#myStopwatch').stopwatch('theme-1');
+  });
+</script>

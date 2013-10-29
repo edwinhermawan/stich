@@ -8,7 +8,7 @@ class GoogleauthController < ApplicationController
 	  # user = User.find_or_create_by_provider_and_uid(auth['provider'], auth['uid'])
 	  # session[:user_id] = user.id
 	  flash[:notice] = "Authentication successful."
-	  redirect_to timers_url
+	  redirect_to cards_url
 	end
 
 	def destroy

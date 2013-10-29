@@ -12,6 +12,6 @@ Stich::Application.routes.draw do
   get 'authentications/new' => 'users#new'
   post 'users' => 'users#create'
 
-  resources :timers
+  resources :cards
 end
 

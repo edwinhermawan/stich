@@ -2,6 +2,7 @@ require 'bcrypt'
 
 class User
 	include Mongoid::Document
+	has_and_belongs_to_many :uprojects, class_name: 'Project', inverse_of: :pusers 
 
 	attr_accessor :password, :password_confirmation
 
@@ -10,9 +11,8 @@ class User
 	field :hashed_password, type: String
 	field :provider, type: String
 	field :uid, type: String
-	field :token, type: String
-	field :project_id, type: String
 
+	field :token, type: String
 
 before_save :hash_password
 validates :email, presence: true

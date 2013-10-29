@@ -9,7 +9,7 @@ class AuthenticationsController < ApplicationController
   	
 	def new
 		if current_user
-			redirect_to timers_url
+			redirect_to cards_url
 		else
 			@user = User.new
 			@newuser = User.new
@@ -22,7 +22,7 @@ class AuthenticationsController < ApplicationController
 	        # authenticate user
 	        if user.authenticate(params[:user][:password])
 	          session[:user_id] = user.id
-	          redirect_to timers_url
+	          redirect_to cards_url
 	        else
 	          flash.now.alert = "Unable to sign you in. Please try again."
 	          render :new
