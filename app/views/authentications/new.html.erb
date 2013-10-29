@@ -23,6 +23,11 @@ Sign in
 		<%= user.text_field :password_confirmation %>
 	</p>
 
+	<p>
+		<%= user.label :token, "API Tokenq" %>
+		<%= user.text_field :token %>
+	</p>
+
 	<p>	
 		<%= user.submit %>
 	</p>
