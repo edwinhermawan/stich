@@ -11,6 +11,7 @@ Stich::Application.routes.draw do
   # New and create routes for Users controller
   get 'authentications/new' => 'users#new'
   post 'users' => 'users#create'
+  post 'projects' => 'projects#pull_cards'
 
   resources :cards
 end

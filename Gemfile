@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 ruby "2.0.0"
 
+#Gem for HTTP Party
+gem 'httparty'
+
 # Heroku gem to handle production environment and keep separate from development environment
 group :production do
 	gem 'rails_12factor'

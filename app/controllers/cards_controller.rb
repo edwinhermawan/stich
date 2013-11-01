@@ -2,6 +2,7 @@ class CardsController < ApplicationController
 
 	def index
 		@cards = Card.all
+		@pivotal_stories = Project.pull_cards(params[:project_id], current_user.token)
 	end
 
 	def show
