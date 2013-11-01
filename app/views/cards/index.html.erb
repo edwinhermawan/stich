@@ -8,13 +8,14 @@
 <% @pivotal_stories.each do |stories| %>
   <p>
     <!-- Code for Timer -->
-    <div id="myStopwatch"></div>
+    <div class="myStopwatch"></div>
     <script type="text/javascript">
       $(function() {
-        $('#myStopwatch').stopwatch('theme-1');
+        $('.myStopwatch').stopwatch('theme-1');
       });
     </script>
     <%= stories %>
+
   </p>
 <% end %>
 <%= button_to "Log out", "/authentications/", :method => :delete %>

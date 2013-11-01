@@ -12,6 +12,7 @@ class Project
         response = HTTParty.get search_url, 
         {:headers => {'X-TrackerToken' => token }
         }
-	    # ids = response.map { |x| x['name'] }
+        # if response
+	    ids = response.map { |x| x['name'] }
         end
     end	
