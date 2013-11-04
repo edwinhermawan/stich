@@ -5,6 +5,7 @@
 <% end %>
   
 <!-- List Stories -->
+
 <% @pivotal_stories.each do |stories| %>
   <p>
     <!-- Code for Timer -->
@@ -14,8 +15,19 @@
         $('.myStopwatch').stopwatch('theme-1');
       });
     </script>
-    <%= stories %>
-
+    <%= form_for @newcards do |u| %>
+      <%=u.text_field :name, :value => stories, :readonly => true %><br />
+      <script type="text/javascript">
+      $('form').on('submit', function(event){
+        event.preventDefault();
+        $.ajax('/cards', {
+          type: 'POST',
+          data: $('form').serialize()
+        });
+      });
+      </script>
+      <%= u.submit "Submit Time" %>
+    <% end %>
   </p>
 <% end %>
 <%= button_to "Log out", "/authentications/", :method => :delete %>

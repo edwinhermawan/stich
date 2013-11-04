@@ -13,6 +13,7 @@ Stich::Application.routes.draw do
   post 'users' => 'users#create'
   post 'projects' => 'projects#pull_cards'
 
+  post 'cards/:id/edit' => 'cards#update'
   resources :cards
 end
 
